@@ -1,9 +1,68 @@
+/* h1 { */
+    /* text-align: center;
+    font-family: ;
+}
+
 body > div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+        & div {
+            width: 150px;
+            height: 300px;
+            background-image: url("media/media/silly_walk/silly_walk.png");
+            background-repeat: no-repeat;
+            /*MARK: dan doe je de width keer het aantal afbeeldingen
+                    150 x 12 = 1800 */
+            /* background-size: 1800px;
+            animation: sillyWalk 1s steps(12) infinite;
+        }
+}
+        @keyframes sillyWalk {
+            from {
+                background-position: 0px;
+            }to{
+                background-position: -1800px;
+            }
+        } */ */
+
+h1 {
+    text-align: center;
+    font-family:
+}
+
+body > div {
+    --width-been:80px;
+    --height-been:150px;
+    --width-lijf: 100px;
+    --height-lijf: 300px;
+
+    width: var(--width-lijf);
+    height: var(--height-lijf);
+    background-color: black;
+    border-radius: calc(var(--width-lijf) * .5);
+    margin: auto;
+    position: relative;
 
     & > div {
-         & > div {
+        width: var(--width-been);
+        height: var(--height-been);
+        background-color: purple;
+        border-radius: calc(var(--width-been) * .5);
+
+        position: absolute;
+        top: calc(100% - var(--width-been));
+        left: calc(50% - var(--width-been) * .5);
+        transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
+        animation: rotate 5s ease infinite;
+
+        & > div {
 
         }
-    }
-       
+    }       
+}
+@keyframes rotate {
+    0% 100% {rotate: -20deg;}
+    50% {rotate: 20deg;}
 }

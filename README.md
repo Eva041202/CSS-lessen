@@ -44,3 +44,32 @@ Uit de presentaties hoorde ik nieuwe begrippen. Als de code wordt uitgelegd kan 
 Morgen hebben we gesprekken over de 2 opdrachten.
 
 Misschien kan ik een begin maken in de css
+
+# Dag 03 (04-03-2026)
+## Checkout
+Besproken met Lisa
+
+## Wat heb ik gedaan vandaag?
+In de ochtend de Weekly Nerd van Nils.
+Hierin vertelde hij onder andere over steps in zijn animatie van één van de websites.
+Deze steps kan ik misschien gebruiken in mijn css opdracht.
+Als ik verschillende afbeeldingen heb van de silly walk en dit aangeef met steps hoeveel dit er zijn kunnen ze over elkaar heen lopen (de foto's).
+
+Op YouTube een video gevonden over animeren. Hier animeren ze door verschillende afbeeldingen over elkaar te laten gaan.
+Net zoals Nils liet zien tijdens de Weekly Nerd.
+
+Workshops van Nils gevold.
+Justify gaat over horizontaal
+Align gaat over verticaal
+
+## Hoe lang duurde het?
+
+## Wat heb ik geleerd?
+Geleerd wat steps doet in animatie
+
+## Wat ga ik morgen doen?
+
+# Weekoverzicht
+## Volledige bronnenlijst:
+Walking Animation CSS only - CSS Tutorial (2023). Geraadpleegd op 04-03-2026 van <a href="https://www.youtube.com/watch?v=9iru1lvgd4w" alt="Walking Animation CSS only">
+
