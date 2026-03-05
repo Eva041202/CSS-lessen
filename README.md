@@ -62,12 +62,40 @@ Workshops van Nils gevold.
 Justify gaat over horizontaal
 Align gaat over verticaal
 
+Na de checkout heeft Sanne me geholpen om meer animatie uit te leggen.
+
 ## Hoe lang duurde het?
++/- 09:15 tot 17:00
 
 ## Wat heb ik geleerd?
 Geleerd wat steps doet in animatie
+Sanne heeft me meer verteld over animeren.
+Geleerd om calc(var()) te gebruiken
 
 ## Wat ga ik morgen doen?
+Morgen wil ik kijken of ik een tweede "been" kan maken en kan laten bewegen.
+
+# Dag 04 (05-03-2026)
+## Checkout
+Besproken met Aya A.
+
+## Wat heb ik gedaan vandaag?
+Workshop animatie gevolgd bij Sanne en layout bij Nils.
+Bij Nils best lang gezeten omdat het cijfer in mijn code niet in het midden wilde, waar we niet uit kwamen.
+
+Ik heb een tweede been gemaakt die kan bewegen.
+Sanne heeft me laten zien hoe je iets naar voor of achter kan plaatsen met transform-style: preserve-3d.
+
+Geleerd dat je met de nth-of-type de verschillende divs aangeeft
+
+## Hoe lang duurde het?
++/- 09:00 - 16:30
+
+## Wat heb ik geleerd?
+Tijdens de eerste workshop heb ik geleerd hoe je pixels kan animeren.
+
+## Wat ga ik morgen doen?
+Morgen zijn de voortgangsgesprekken.
 
 # Weekoverzicht
 ## Volledige bronnenlijst:

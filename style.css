@@ -1,5 +1,5 @@
-/* h1 { */
-    /* text-align: center;
+/* h1 {
+    text-align: center;
     font-family: ;
 }
 
@@ -25,7 +25,13 @@ body > div {
             }to{
                 background-position: -1800px;
             }
-        } */ */
+        } */
+
+/* Het sterretje betekent alles */
+* {
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
 
 h1 {
     text-align: center;
@@ -33,10 +39,12 @@ h1 {
 }
 
 body > div {
-    --width-been:80px;
-    --height-been:150px;
     --width-lijf: 100px;
     --height-lijf: 300px;
+    --width-been:80px;
+    --height-been:150px;
+    --width-arm:80px;
+    --height-arm:150px;
 
     width: var(--width-lijf);
     height: var(--height-lijf);
@@ -45,7 +53,7 @@ body > div {
     margin: auto;
     position: relative;
 
-    & > div {
+    & > div:nth-of-type(1) {
         width: var(--width-been);
         height: var(--height-been);
         background-color: purple;
@@ -56,11 +64,44 @@ body > div {
         left: calc(50% - var(--width-been) * .5);
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
         animation: rotate 5s ease infinite;
+        translate: 0 0 .1em;
+    }
 
-        & > div {
+    & > div:nth-of-type(2) {
+        width: var(--width-been);
+        height: var(--height-been);
+        background-color:blueviolet;
+        border-radius: calc(var(--width-been) * .5);
 
-        }
-    }       
+        position: absolute;
+        top: calc(100% - var(--width-been));
+        left: calc(50% - var(--width-been) * .5);
+        transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
+        animation: rotate 1s ease infinite;
+        translate: 0 0 -2em;
+    }
+
+    & > div:nth-of-type(3) {
+        width: var(--width-arm);
+        height: var(--height-arm);
+        background-color: yellow;
+        border-radius: calc(var(--width-arm) * .5);
+
+        position: absolute;
+    }
+    
+    & > div:nth-of-type(4) {
+        width: var(--width-arm);
+        height: var(--height-arm);
+        background-color: orange;
+        border-radius: calc(var(--width-arm) * .5);
+
+        position: absolute;
+        /* top: calc(100% - var(--width-arm));
+        left: calc(50% - var(--width-arm) * .5);
+        transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5); */
+        animation: rotate 2s ease infinite;
+    }
 }
 @keyframes rotate {
     0% 100% {rotate: -20deg;}
