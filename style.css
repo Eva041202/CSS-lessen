@@ -78,7 +78,7 @@ body > div {
         left: calc(50% - var(--width-been) * .5);
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
         animation: rotate 1s ease infinite;
-        translate: 0 0 -2em;
+        translate: 0 0 -.1em;
     }
 
     & > div:nth-of-type(3) {
