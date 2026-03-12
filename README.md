@@ -134,16 +134,37 @@ Ik hoop met de informatie van de container query workshop 2 knopjes te kunnen ma
 
 # Dag 06 (12-03-2026)
 ## Checkout
-Besproken met
+Besproken met Xavannah.
 
 ## Wat heb ik gedaan vandaag?
+'s ochtend liet Sanne het een en ander zien over wiskunde in css. Ik vind het goed te begrijpen, maar kan dit (nog) niet zelf toepassen.
+
+Ik heb alle benen een onderbeen gegeven.
+Nu staan ze een stukje naar achter met -15deg. Deze wil ik ook weer apart laten animeren.
+De titel heb ik een naam gegeven en iedere letter een aparte kleur. Met animation-delay laat ik iedere letter apart constant van kleur veranderen.
+De titel is Flying Circus en met al deze kleurtjes is het veel meer circus-achtig.
+
+'s middags workshop wiskunde bij Sanne gevolgd. Waarom bepaalde dingen wat doen begrijp ik, maar dit ga ik niet zelf kunnen bedenken en maken.
+
+Workshop variabele fonts van Vasilis gevolgd.
+Bron aangereikt: Wakamai Fondue van <a href="https://wakamaifondue.com/beta/" alt="wakamaifondue">
+                 Typerature van <a href="https://nabla.typearture.com/" alt="typerature">
+
+Vanmiddag krijgen we een lezing in ksh over NL design system
 
 ## Hoe lang duurde het?
+Van +/- 09:15 tot 15:30
 
 ## Wat heb ik geleerd?
+Geen nieuwe code die ik nu zelf kan toepassen
 
 ## Wat ga ik morgen doen?
+Morgen hebben we weer de voortganggesprekken
 
 # Weekoverzicht
 ## Volledige bronnenlijst:
-
+mdn (2003). <a href="https://developer.mozilla.org/en-US/" alt="mdn">
+w3schools (1998) <a href="https://www.w3schools.com/" alt="w3schools">
+stack overflow (2008) <a href="https://stackoverflow.com/questions" alt="stack_overflow">
+Wakamai Fondue (2018). Geraadpleegd op 12-03-2026 van <a href="https://wakamaifondue.com/beta/" alt="wakamaifondue">
+Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/" alt="typerature"

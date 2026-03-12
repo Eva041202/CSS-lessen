@@ -4,14 +4,6 @@
     transform-style: preserve-3d;
 }
 
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
-
 body {
     min-height:100dvh;
     margin:0;
@@ -21,13 +13,46 @@ body {
     align-items:center;
 }
 
+html:has([value="different"]:checked) {
+	--different:true;
+}
+
+@container style(--different:true) {
+	body {
+		--background-color: rgb(9, 83, 9);
+		--accent: rgb(9, 83, 9);
+	}
+}
 
 h1 {
     position: fixed;
     text-align: center;
-    font-family: sans-serif;
     top:1em;
+    font-family: sans-serif;
+    font-weight:800;
+    font-size: xx-large;
 }
+
+h1 span {
+    animation: colors 2s infinite;
+}
+
+h1 span:nth-of-type(1) {animation-delay: 0s;}
+h1 span:nth-of-type(2) {animation-delay: .2s;}
+h1 span:nth-of-type(3) {animation-delay: .4s;}
+h1 span:nth-of-type(4) {animation-delay: .6s;}
+h1 span:nth-of-type(5) {animation-delay: .8s;}
+h1 span:nth-of-type(6) {animation-delay: 1s;}
+h1 span:nth-of-type(7) {animation-delay: 1.2s;}
+h1 span:nth-of-type(8) {animation-delay: 1.4s;}
+h1 span:nth-of-type(9) {animation-delay: 1.6s;}
+h1 span:nth-of-type(10) {animation-delay: 1.8s;}
+h1 span:nth-of-type(11) {animation-delay: 2s;}
+h1 span:nth-of-type(12) {animation-delay: 2.2s;}
+
+/* h1:hover {
+    font-size: 5em;
+} */
 
 
 body > div {
@@ -61,7 +86,19 @@ body > div {
 
         animation: rotate 5s ease infinite;
         translate: 0 0 .1em;
-        rotate: -90deg;
+
+        & > div {
+            width: var(--width-been);
+            height: var(--height-been);
+            background-color: red;
+            border-radius: calc(var(--width-been) * .5);
+
+            position: absolute;
+            top: calc( var(--height-been) - var(--width-been) * .5);
+            left: calc(50% - var(--width-been) * .5);
+            transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5) ;
+            rotate: -15deg;
+        }
     }
 
     & > div:nth-of-type(2) {
@@ -76,7 +113,19 @@ body > div {
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
         animation: rotate 1s ease infinite;
         translate: 0 0 -.1em;
-        rotate: -90deg;
+
+        & > div {
+            width: var(--width-been);
+            height: var(--height-been);
+            background-color: hotpink;
+            border-radius: calc(var(--width-been) * .5);
+
+            position: absolute;
+            top: calc( var(--height-been) - var(--width-been) * .5);
+            left: calc(50% - var(--width-been) * .5);
+            transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5) ;
+            rotate: -15deg;
+        }
     }
 
     /* armen */
@@ -90,7 +139,19 @@ body > div {
         top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         right: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5);
-        rotate: -90deg;
+
+        & > div {
+            width: var(--width-been);
+            height: var(--height-been);
+            background-color: darkgreen;
+            border-radius: calc(var(--width-been) * .5);
+
+            position: absolute;
+            top: calc( var(--height-been) - var(--width-been) * .5);
+            left: calc(50% - var(--width-been) * .5);
+            transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5) ;
+            rotate: -15deg;
+        }
     }
     
     & > div:nth-of-type(4) {
@@ -105,8 +166,28 @@ body > div {
         transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5);
         animation: rotate 2s ease infinite;
         translate: 0 0 -.1em;
-        rotate: -90deg;
+
+        & > div {
+            width: var(--width-been);
+            height: var(--height-been);
+            background-color: darkblue;
+            border-radius: calc(var(--width-been) * .5);
+
+            position: absolute;
+            top: calc( var(--height-been) - var(--width-been) * .5);
+            left: calc(50% - var(--width-been) * .5);
+            transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5) ;
+            rotate: -15deg;
+        }
     }
+}
+
+@keyframes colors {
+    0% {color: blueviolet;}
+    25% {color: purple;}
+    50% {color: yellow;}
+    75% {color: orange;}
+    100% {color: hotpink;}
 }
 
 @keyframes rotate {
