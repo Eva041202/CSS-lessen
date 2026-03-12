@@ -1,48 +1,42 @@
-/* h1 {
-    text-align: center;
-    font-family: ;
-}
-
-body > div {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-        & div {
-            width: 150px;
-            height: 300px;
-            background-image: url("media/media/silly_walk/silly_walk.png");
-            background-repeat: no-repeat;
-            /*MARK: dan doe je de width keer het aantal afbeeldingen
-                    150 x 12 = 1800 */
-            /* background-size: 1800px;
-            animation: sillyWalk 1s steps(12) infinite;
-        }
-}
-        @keyframes sillyWalk {
-            from {
-                background-position: 0px;
-            }to{
-                background-position: -1800px;
-            }
-        } */
-
 /* Het sterretje betekent alles */
 * {
     box-sizing: border-box;
     transform-style: preserve-3d;
 }
 
-h1 {
-    text-align: center;
-    font-family:
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+body {
+    min-height:100dvh;
+    margin:0;
+
+    display:grid;
+    justify-items: center;
+    align-items:center;
 }
 
+
+h1 {
+    position: fixed;
+    text-align: center;
+    font-family: sans-serif;
+    top:1em;
+}
+
+
 body > div {
-    --width-lijf: 100px;
-    --height-lijf: 300px;
+    --width-lijf: 300px;
+    --height-lijf: 100px;
+
     --width-been:80px;
     --height-been:150px;
+
     --width-arm:80px;
     --height-arm:150px;
 
@@ -50,9 +44,9 @@ body > div {
     height: var(--height-lijf);
     background-color: black;
     border-radius: calc(var(--width-lijf) * .5);
-    margin: auto;
     position: relative;
 
+    /* benen */
     & > div:nth-of-type(1) {
         width: var(--width-been);
         height: var(--height-been);
@@ -60,11 +54,14 @@ body > div {
         border-radius: calc(var(--width-been) * .5);
 
         position: absolute;
-        top: calc(100% - var(--width-been));
-        left: calc(50% - var(--width-been) * .5);
+        top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+        left: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
+
         animation: rotate 5s ease infinite;
         translate: 0 0 .1em;
+        rotate: -90deg;
     }
 
     & > div:nth-of-type(2) {
@@ -74,13 +71,15 @@ body > div {
         border-radius: calc(var(--width-been) * .5);
 
         position: absolute;
-        top: calc(100% - var(--width-been));
-        left: calc(50% - var(--width-been) * .5);
+        top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+        left: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
         animation: rotate 1s ease infinite;
         translate: 0 0 -.1em;
+        rotate: -90deg;
     }
 
+    /* armen */
     & > div:nth-of-type(3) {
         width: var(--width-arm);
         height: var(--height-arm);
@@ -88,6 +87,10 @@ body > div {
         border-radius: calc(var(--width-arm) * .5);
 
         position: absolute;
+        top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+        right: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+        transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5);
+        rotate: -90deg;
     }
     
     & > div:nth-of-type(4) {
@@ -97,13 +100,16 @@ body > div {
         border-radius: calc(var(--width-arm) * .5);
 
         position: absolute;
-        /* top: calc(100% - var(--width-arm));
-        left: calc(50% - var(--width-arm) * .5);
-        transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5); */
+        top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+        right: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
+        transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5);
         animation: rotate 2s ease infinite;
+        translate: 0 0 -.1em;
+        rotate: -90deg;
     }
 }
+
 @keyframes rotate {
-    0% 100% {rotate: -20deg;}
-    50% {rotate: 20deg;}
+    0%, 100% {rotate: -90deg;}
+    50% {rotate: 90deg;}
 }

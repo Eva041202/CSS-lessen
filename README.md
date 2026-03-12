@@ -101,3 +101,49 @@ Morgen zijn de voortgangsgesprekken.
 ## Volledige bronnenlijst:
 Walking Animation CSS only - CSS Tutorial (2023). Geraadpleegd op 04-03-2026 van <a href="https://www.youtube.com/watch?v=9iru1lvgd4w" alt="Walking Animation CSS only">
 
+# Dag 05 (11-03-2026)
+## Checkout
+Besproken met Dylan
+
+## Wat heb ik gedaan vandaag?
+Vanochtend workshop container query gevolgd.
+
+Ik heb niet erg veel kunnen coderen vandaag.
+De armen staan nu boven in het midden van het lijf en het hele poppetje heb ik 90 grade gedraaid, zodat het een diertje kan worden.
+
+'s middags workshop gekke dingen gevolgd van Cyd.
+Ze ging enorm snel, maar ik heb het kunen volgen :)
+
+Ik heb de pootjes nu verticaal kunnen krijgen inplaats horizontaal.
+
+Ik probeer om het lichaam in het midden van het scherm te krijgen, maar dit lukt nog niet.
+Als ik dit in de body doe neemt dit ook de titel mee.
+Als ik dit doe met de eerste div dan wordt mijn lijf heeell lang.
+
+Sanne heeft me laten zien dat dit met position: fixed; kan
+
+## Hoe lang duurde het?
+Van +/- 09:10 tot 17:00
+
+## Wat heb ik geleerd?
+Nieuwe dingen over de container query en hoe je kan inzoomen op een afbeelding tijdens scrollen.
+
+## Wat ga ik morgen doen?
+Morgen wil ik de titel bijpassende kleuren en font gaan geven
+Ik hoop met de informatie van de container query workshop 2 knopjes te kunnen maken die ieder een andere achtergrond geven.
+
+# Dag 06 (12-03-2026)
+## Checkout
+Besproken met
+
+## Wat heb ik gedaan vandaag?
+
+## Hoe lang duurde het?
+
+## Wat heb ik geleerd?
+
+## Wat ga ik morgen doen?
+
+# Weekoverzicht
+## Volledige bronnenlijst:
+
