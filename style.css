@@ -5,16 +5,20 @@
 }
 
 body {
+    background-color: white;
+
     min-height:100dvh;
     margin:0;
 
     display:grid;
     justify-items: center;
     align-items:center;
+
+    container-type: style;
 }
 
-html:has([value="different"]:checked) {
-	--different:true;
+body:has(input[value="different"]:checked) {
+	background-color: rgb(9, 83, 9);
 }
 
 @container style(--different:true) {
@@ -50,9 +54,30 @@ h1 span:nth-of-type(10) {animation-delay: -1.8s;}
 h1 span:nth-of-type(11) {animation-delay: -2s;}
 h1 span:nth-of-type(12) {animation-delay: -2.2s;}
 
-/* h1:hover {
-    font-size: 5em;
-} */
+
+.foot-img {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -300px;
+    width: 250px;
+}
+
+body:has(input[value="different"]:checked) .foot-img {
+    animation: dropFoot 0.8s forwards;
+}
+
+@keyframes dropFoot {
+    0% {
+        top: -300px;
+    }
+    80% {
+        top: 70px;
+    }
+    100% {
+        top: 50px;
+    }
+}
 
 
 body > div {

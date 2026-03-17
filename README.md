@@ -167,4 +167,8 @@ mdn (2003). <a href="https://developer.mozilla.org/en-US/" alt="mdn">
 w3schools (1998) <a href="https://www.w3schools.com/" alt="w3schools">
 stack overflow (2008) <a href="https://stackoverflow.com/questions" alt="stack_overflow">
 Wakamai Fondue (2018). Geraadpleegd op 12-03-2026 van <a href="https://wakamaifondue.com/beta/" alt="wakamaifondue">
-Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/" alt="typerature"
+Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/" alt="typerature">
+
+
+## Volledige bronnelijst:
+Wikipedia Monty python foot (2008). Geraadpleegd op (17-03-2026) van <a href="https://nl.wikipedia.org/wiki/Bestand:Monty_python_foot.png" alt="monty_python_foot">
