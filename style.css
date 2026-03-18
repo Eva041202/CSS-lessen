@@ -11,23 +11,15 @@ body {
     margin:0;
 
     display:grid;
+    /* grid-template-rows: 1fr 1fr 1fr; */
     justify-items: center;
-    align-items:center;
+    /* align-items:center; */
 
     container-type: style;
 }
 
-body:has(input[value="different"]:checked) {
-	background-color: rgb(9, 83, 9);
-}
 
-@container style(--different:true) {
-	body {
-		--background-color: rgb(9, 83, 9);
-		--accent: rgb(9, 83, 9);
-	}
-}
-
+/* Titel */
 h1 {
     position: fixed;
     text-align: center;
@@ -54,41 +46,71 @@ h1 span:nth-of-type(10) {animation-delay: -1.8s;}
 h1 span:nth-of-type(11) {animation-delay: -2s;}
 h1 span:nth-of-type(12) {animation-delay: -2.2s;}
 
+@keyframes colors {
+    0% {color: blueviolet;}
+    25% {color: purple;}
+    50% {color: yellow;}
+    75% {color: orange;}
+    100% {color: hotpink;}
+}
 
+@keyframes rotate {
+    0%, 100% {rotate: -90deg;}
+    50% {rotate: 90deg;}
+}
+
+/* Checkboxen naast elkaar */
+label {
+    display: flexbox;
+    flex-direction: row;
+}
+
+
+/* Achtergrond veranderen met checkbox */
+body:has(input[value="different"]:checked) {
+	background-color: rgb(9, 83, 9);
+}
+
+@container style(--different:true) {
+	body {
+		--background-color: rgb(9, 83, 9);
+		--accent: rgb(9, 83, 9);
+	}
+}
+
+
+/* Verschijnende voet */
 .foot-img {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    top: -300px;
-    width: 250px;
+    top: -500px;
+    width: 500px;
 }
 
 body:has(input[value="different"]:checked) .foot-img {
-    animation: dropFoot 0.8s forwards;
+    animation: dropFoot 0.7s ease-out forwards;
 }
 
 @keyframes dropFoot {
     0% {
         top: -300px;
-    }
-    80% {
-        top: 70px;
+        transform: translateX(-50%) scaleY(1);
     }
     100% {
-        top: 50px;
+        top: 52vh;
+        transform: translateX(-50%) scaleY(1);
     }
 }
 
 
+/* Het lichaam */
 body > div {
     --width-lijf: 300px;
     --height-lijf: 100px;
 
     --width-been:80px;
     --height-been:150px;
-
-    --width-arm:80px;
-    --height-arm:150px;
 
     width: var(--width-lijf);
     height: var(--height-lijf);
@@ -109,7 +131,7 @@ body > div {
 
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
 
-        animation: rotate 5s ease infinite;
+        rotate: 0deg;
         translate: 0 0 .1em;
 
         & > div {
@@ -136,7 +158,8 @@ body > div {
         top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         left: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
-        animation: rotate 1s ease infinite;
+
+        rotate: 0deg;
         translate: 0 0 -.1em;
 
         & > div {
@@ -153,17 +176,18 @@ body > div {
         }
     }
 
-    /* armen */
     & > div:nth-of-type(3) {
-        width: var(--width-arm);
-        height: var(--height-arm);
+        width: var(--width-been);
+        height: var(--height-been);
         background-color: yellow;
-        border-radius: calc(var(--width-arm) * .5);
+        border-radius: calc(var(--width-been) * .5);
 
         position: absolute;
         top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         right: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
-        transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5);
+        transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
+
+        rotate: 0deg;
 
         & > div {
             width: var(--width-been);
@@ -180,16 +204,17 @@ body > div {
     }
     
     & > div:nth-of-type(4) {
-        width: var(--width-arm);
-        height: var(--height-arm);
+        width: var(--width-been);
+        height: var(--height-been);
         background-color: orange;
-        border-radius: calc(var(--width-arm) * .5);
+        border-radius: calc(var(--width-been) * .5);
 
         position: absolute;
         top:  calc( var(--height-lijf) * .5 - var(--width-been) * .5);
         right: calc( var(--height-lijf) * .5 - var(--width-been) * .5);
-        transform-origin: calc(var(--width-arm) * .5) calc(var(--width-arm) * .5);
-        animation: rotate 2s ease infinite;
+        transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
+
+        rotate: 0deg;
         translate: 0 0 -.1em;
 
         & > div {
@@ -207,15 +232,129 @@ body > div {
     }
 }
 
-@keyframes colors {
-    0% {color: blueviolet;}
-    25% {color: purple;}
-    50% {color: yellow;}
-    75% {color: orange;}
-    100% {color: hotpink;}
+
+/* Hoofd */
+body > div::after {
+    content: "";
+    position: absolute;
+
+    width: 170px;
+    height: 120px;
+    background: peachpuff;
+
+    border-radius: 50%;
+
+    right: calc(var(--height-lijf) * -0.7);
+    top: calc(var(--height-lijf) * -1.15);
+
+    z-index: 10;
 }
 
-@keyframes rotate {
-    0%, 100% {rotate: -90deg;}
-    50% {rotate: 90deg;}
+
+/* Animatie checkbox walk */
+body:has(input[value="walk"]:checked) > div > div:nth-of-type(1) {
+    animation: walk1 1s ease-in-out infinite;
+}
+
+body:has(input[value="walk"]:checked) > div > div:nth-of-type(2) {
+    animation: walk2 1s ease-in-out infinite;
+}
+
+body:has(input[value="walk"]:checked) > div > div:nth-of-type(3) {
+    animation: walk2 1s ease-in-out infinite;
+}
+
+body:has(input[value="walk"]:checked) > div > div:nth-of-type(4) {
+    animation: walk1 1s ease-in-out infinite;
+}
+
+@keyframes walk1 {
+    0%, 100% { rotate: -20deg; }
+    50% { rotate: 20deg; }
+}
+
+@keyframes walk2 {
+    0% 100% { rotate: 20deg; }
+    50% { rotate: -20deg; }
+}
+
+
+/* Animatie checkbox run */
+body:has(input[value="run"]:checked) > div > div:nth-of-type(1),
+body:has(input[value="run"]:checked) > div > div:nth-of-type(4) {
+    animation: run1 0.5s ease-in-out infinite;
+}
+
+body:has(input[value="run"]:checked) > div > div:nth-of-type(2),
+body:has(input[value="run"]:checked) > div > div:nth-of-type(3) {
+    animation: run2 0.5s ease-in-out infinite;
+}
+
+@keyframes run1 {
+    0% 100% { rotate: -30deg; }
+    50% { rotate: 30deg; }
+}
+
+@keyframes run2 {
+    0% 100% { rotate: -30deg; }
+    50% { rotate: -30deg; }
+}
+
+
+/* Animatie checkox silly */
+body:has(input[value="silly"]:checked) > div > div:nth-of-type(1) {
+    animation: silly1 0.7s ease-in-out infinite;
+}
+body:has(input[value="silly"]:checked) > div > div:nth-of-type(2) {
+    animation: silly2 0.7s ease-in-out infinite, spin1 2s linear infinite;
+}
+body:has(input[value="silly"]:checked) > div > div:nth-of-type(3) {
+    animation: silly3 0.7s ease-in-out infinite, spin2 2s linear infinite;
+}
+body:has(input[value="silly"]:checked) > div > div:nth-of-type(4) {
+    animation: silly4 0.7s ease-in-out infinite;
+}
+
+@keyframes silly1 {
+    0% 100% { rotate: -45deg; translateX(0); }
+    25% { rotate: 45deg; translateX(10px); }
+    50% { rotate: -60deg; translateX(-10px); }
+    75% { rotate: 60deg; translateX(5); }
+}
+
+@keyframes spin1 {
+    0% { rotate: 0deg; }
+    25% { rotate: 180deg; }
+    50% { rotate: 360deg; }
+    75% { rotate: 180deg; }
+    100% { rotate: 360deg; }
+}
+
+@keyframes silly2 {
+    0% 100% { rotate: 60deg; translateX(0); }
+    25% { rotate: -45deg; translateX(-5px); }
+    50% { rotate: 45deg; translateX(10px); }
+    75% { rotate: -60deg; translateX(-10px); }
+}
+
+@keyframes silly3 {
+    0% 100% { rotate: -30deg; translateX(0); }
+    25% { rotate: 30deg; translateX(10px); }
+    50% { rotate: -45deg; translateX(-10px); }
+    75% { rotate: 45deg; translateX(5px); }
+}
+
+@keyframes spin2 {
+    0% { rotate: 0deg; }
+    25% { rotate: 360deg; }
+    50% { rotate: 180deg; }
+    75% { rotate: 360deg; }
+    100% { rotate: 0deg; }
+}
+
+@keyframes silly4 {
+    0% 100% { rotate: 30deg; translateX(0); }
+    25% { rotate: -30deg; translateX(-5px); }
+    50% { rotate: 60deg; translateX(10px); }
+    75% { rotate: -60deg; translateX(-10px); }
 }
