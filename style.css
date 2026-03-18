@@ -4,17 +4,19 @@
     transform-style: preserve-3d;
 }
 
+/* Sanne heeft me geholpen wat ik moet doen om de achtergronden over te laten lopen */
 body {
-    background-color: white;
+    background-image: url("./media/media/silly_walk/background.png"), url("./media/media/silly_walk/background2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-position 0.7s;
 
     min-height:100dvh;
     margin:0;
 
     display:grid;
-    /* grid-template-rows: 1fr 1fr 1fr; */
     justify-items: center;
-    /* align-items:center; */
-
     container-type: style;
 }
 
@@ -54,27 +56,20 @@ h1 span:nth-of-type(12) {animation-delay: -2.2s;}
     100% {color: hotpink;}
 }
 
-@keyframes rotate {
-    0%, 100% {rotate: -90deg;}
-    50% {rotate: 90deg;}
-}
-
-/* Checkboxen naast elkaar */
-label {
-    display: flexbox;
-    flex-direction: row;
-}
-
 
 /* Achtergrond veranderen met checkbox */
-body:has(input[value="different"]:checked) {
-	background-color: rgb(9, 83, 9);
+html:has(input[value="different"]:checked) {
+    --different:true;
 }
 
 @container style(--different:true) {
 	body {
 		--background-color: rgb(9, 83, 9);
 		--accent: rgb(9, 83, 9);
+        background-color: rgb(9, 83, 9);
+        background-position: 
+        center 100vh, 
+        center center;
 	}
 }
 
@@ -84,21 +79,27 @@ body:has(input[value="different"]:checked) {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    top: -500px;
-    width: 500px;
+    top: -800px;
+    width: 800px;
+    height: 800px;
+
 }
 
 body:has(input[value="different"]:checked) .foot-img {
     animation: dropFoot 0.7s ease-out forwards;
 }
 
+body:has(input[value="different"]:checked) > div {
+    display: none;
+}
+
 @keyframes dropFoot {
     0% {
-        top: -300px;
+        top: -800px;
         transform: translateX(-50%) scaleY(1);
     }
     100% {
-        top: 52vh;
+        top: 15vh;
         transform: translateX(-50%) scaleY(1);
     }
 }
@@ -116,6 +117,7 @@ body > div {
     height: var(--height-lijf);
     background-color: black;
     border-radius: calc(var(--width-lijf) * .5);
+
     position: relative;
 
     /* benen */

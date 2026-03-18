@@ -169,6 +169,18 @@ stack overflow (2008) <a href="https://stackoverflow.com/questions" alt="stack_o
 Wakamai Fondue (2018). Geraadpleegd op 12-03-2026 van <a href="https://wakamaifondue.com/beta/" alt="wakamaifondue">
 Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/" alt="typerature">
 
+# Dag 07 (18-03-2026)
+## Checkout
+Besproken met Melvin
+
+## Wat heb ik gedaan vandaag?
+
+## Hoe lang duurde dat?
+
+## Wat heb ik geleerd?
+
+## Wat ga ik morgen doen?
+
 
 ## Volledige bronnelijst:
 Wikipedia Monty python foot (2008). Geraadpleegd op (17-03-2026) van <a href="https://nl.wikipedia.org/wiki/Bestand:Monty_python_foot.png" alt="monty_python_foot">
