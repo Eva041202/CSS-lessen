@@ -22,6 +22,7 @@ Bronnenlijst:
 Day 6: the :has() pseudo-class (2022). Geraadpleegd op 18-02-2026 van https://www.matuzo.at/blog/2022/100daysof-day6/
 Using :has() as a CSS Parent Selector and much more (2022). Geraadpleegd op 18-02-2026 van https://webkit.org/blog/13096/css-has-pseudo-class/
 
+
 # Dag 02 (19-02-2026)
 ## Checkout
 Besproken met Alex.
@@ -44,6 +45,24 @@ Uit de presentaties hoorde ik nieuwe begrippen. Als de code wordt uitgelegd kan 
 Morgen hebben we gesprekken over de 2 opdrachten.
 
 Misschien kan ik een begin maken in de css
+
+
+# Weekoverzicht
+De eerste dag gewerkt met het groepje. Screenshots van onze code:
+<img src="./media/media/1e_les_css_has()/html 01.png">
+<img src="./media/media/1e_les_css_has()/html 02.png">
+<img src="./media/media/1e_les_css_has()/html 03.png">
+<img src="./media/media/1e_les_css_has()/css 01.png">
+<img src="./media/media/1e_les_css_has()/css 02.png">
+<img src="./media/media/1e_les_css_has()/css 03.png">
+<img src="./media/media/1e_les_css_has()/css 04.png">
+<img src="./media/media/1e_les_css_has()/css 05.png">
+<img src="./media/media/1e_les_css_has()/website 01.png">
+<img src="./media/media/1e_les_css_has()/website 02.png">
+
+Ik heb een idee op papier gemaakt wat ik voor de css opdracht wil doen.
+Ik heb nog geen idee hoe ik dit ga doen.
+
 
 # Dag 03 (04-03-2026)
 ## Checkout
@@ -75,6 +94,7 @@ Geleerd om calc(var()) te gebruiken
 ## Wat ga ik morgen doen?
 Morgen wil ik kijken of ik een tweede "been" kan maken en kan laten bewegen.
 
+
 # Dag 04 (05-03-2026)
 ## Checkout
 Besproken met Aya A.
@@ -98,8 +118,16 @@ Tijdens de eerste workshop heb ik geleerd hoe je pixels kan animeren.
 Morgen zijn de voortgangsgesprekken.
 
 # Weekoverzicht
-## Volledige bronnenlijst:
-Walking Animation CSS only - CSS Tutorial (2023). Geraadpleegd op 04-03-2026 van <a href="https://www.youtube.com/watch?v=9iru1lvgd4w" alt="Walking Animation CSS only">
+Joost had me vorige week vrijdag laten zien dat je met divjes verschillende stukken van het lijf kan maken.
+Hiermee heb ik een lijf div gemaakt.
+
+De weekly nerd van Nils deze week inspireerde mij om op die manier te animeren. Veel afbeeldingen van de silly walk en deze animeren met steps.
+Dit kreeg ik enigszins werkend, maar is te makkelijk en daarnaast niet interactief.
+
+In het lijf zitten nu twee benen die kunnen bewegen.
+
+Tijdens het gesprek vrijdag stelde Sanne voor om er een beestje van te maken. Dit kan namelijker vreemder bewegen en is "makkelijker" dan een mens.
+
 
 # Dag 05 (11-03-2026)
 ## Checkout
@@ -147,8 +175,8 @@ De titel is Flying Circus en met al deze kleurtjes is het veel meer circus-achti
 's middags workshop wiskunde bij Sanne gevolgd. Waarom bepaalde dingen wat doen begrijp ik, maar dit ga ik niet zelf kunnen bedenken en maken.
 
 Workshop variabele fonts van Vasilis gevolgd.
-Bron aangereikt: Wakamai Fondue van <a href="https://wakamaifondue.com/beta/" alt="wakamaifondue">
-                 Typerature van <a href="https://nabla.typearture.com/" alt="typerature">
+Bron aangereikt: Wakamai Fondue van <a href="https://wakamaifondue.com/beta/">
+                 Typerature van <a href="https://nabla.typearture.com/">
 
 Vanmiddag krijgen we een lezing in ksh over NL design system
 
@@ -162,25 +190,148 @@ Geen nieuwe code die ik nu zelf kan toepassen
 Morgen hebben we weer de voortganggesprekken
 
 # Weekoverzicht
-## Volledige bronnenlijst:
-mdn (2003). <a href="https://developer.mozilla.org/en-US/" alt="mdn">
-w3schools (1998) <a href="https://www.w3schools.com/" alt="w3schools">
-stack overflow (2008) <a href="https://stackoverflow.com/questions" alt="stack_overflow">
-Wakamai Fondue (2018). Geraadpleegd op 12-03-2026 van <a href="https://wakamaifondue.com/beta/" alt="wakamaifondue">
-Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/" alt="typerature">
+Deze week merk ik dat ik deze opdracht echt veel lastiger vind dan bt.
+Het lijf heb ik 180 gedraaid. Dit deed ik eerst met rotate, maar dit is logischer om te doen door de width en height aan te passen, zodat het horizontaal ligt.
+
+De weekly nerd deze week ging enorm snel, maar ik heb veel aantekeningen kunnen maken.
+Ik hoop hier wat van in bt te kunnen verwerken.
+## Bronnenlijst:
+mdn (2003). <a href="https://developer.mozilla.org/en-US/">
+w3schools (1998) <a href="https://www.w3schools.com/">
+stack overflow (2008) <a href="https://stackoverflow.com/questions">
+Wakamai Fondue (2018). Geraadpleegd op 12-03-2026 van <a href="https://wakamaifondue.com/beta/">
+Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/">
+
 
 # Dag 07 (18-03-2026)
 ## Checkout
 Besproken met Melvin
 
 ## Wat heb ik gedaan vandaag?
+Ik heb een hoofd toegevoegd aan het poppetje.
+Het poppetje heb ik stil laten staan en met checkboxen en :has() ervoor gezorgd dat het poppetje anders beweegt met de verschillende checkboxen.
+
+Met de checkbox different komt de voet van Monty Python tevoorschijn. Eerst wilde ik dat de voet voor het poppetje kwam. Het leek me leuker als de voet het poppetje plet, maar ik kwam er niet goed uit hoe ik dit kan doen.
+Uiteindelijk heb ik ervoor gekozen om het poppetje een display:none te geven als de voet komt.
 
 ## Hoe lang duurde dat?
+Van +/- 09:10 tot 16:30
 
 ## Wat heb ik geleerd?
+Hoe je een background image toevoegd.
+
+Over translate, dat je het object verticaal en/of horizontaal verplaatst.
+en met scale hoe breed het verticaal en/of horizontaal wordt.
 
 ## Wat ga ik morgen doen?
+De website moet ik nog responsive maken. Omdat ik vaste px-maten heb moet ik dit met clamp() gaan doen. Hie heb ik eerder van gehoord, maar weet daar nog te weinig over. Dit moet ik gaan uitzoeken.
 
+De checkbox run wil ik verbeteren, want wat het beestje nu doet is nog niet echt rennen.
+
+Als ik tijd over heb wil ik nog ogen en/of een staart toe voegen.
+Tip van Melvin was om de ogen met ::before toe te voegen.
+
+
+# Dag 08 (19-03-2026)
+## Wat heb ik gedaan vandaag?
+De readme even up to date gemaakt.
+
+De pagina responsive gemaakt. Docenten hadden gesprekken, dus ik heb hiervoor hulp en uitleg gevraagd aan chatgpt. Als ik vraag om het in Jip-en-Janneke-taal uit te leggen kom ik een heel eind.
+
+De checkbox run heb ik verbeterd. Het poppetje rent nu, maar de animatie verspringt steeds. Dit wil ik nog even uitzoeken en/of vragen.
+Ik had (natuurlijk) een komma te veel.....
+
+# Weekoverzicht
+Ik heb deze dagen nog best wat kunnen doen. Voor de laatste loodjes heb ik wel chatgpt om hulp gevraagd. Ook omdat docenten met gesprekken bezig waren.
+Zodra ik chat niet begrijp laat ik dit zitten, omdat het dan alleen maar vager wordt.
+Het vragen aan chatgpt om bepaalde dingen in Jip-en-Janneke-taal uit te leggen werkt heel goed.
+## Bronnenlijst:
+Wikipedia Monty python foot (2008). Geraadpleegd op 17-03-2026 van <a href="https://nl.wikipedia.org/wiki/Bestand:Monty_python_foot.png">
+mdn - translateX() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX#:~:text=The%20translateX()%20CSS%20function,transform%2Dfunction%3E%20data%20type.">
+mdn - translateY() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateY">
+mdn - scaleX() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX">
+mdn - scaleY() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX#:~:text=The%20translateX()%20CSS%20function,transform%2Dfunction%3E%20data%20type.">
+Monty Python (2014). Geraadpleegd op 18-03-2026 van <a href="https://www.montypython.com/home">
+mdn - HTML images (2026). Geraadpleegd op 18-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#:~:text=You%20should%20use%20CSS%20background,t%20waste%20time%20reading%20it.">
+w3schools - HTML background images (z.d.). Geraadpleegd op 18-03-2026 <a href="https://www.w3schools.com/html/html_images_background.asp">
+
+
+# Evaluatie.
+Voor de volgende keer moet ik beter de readme bijhouden.
+Dit deed ik wel dagelijks, maar de weekoverzichten vergat ik soms en ik kwam er vrij laat achter dat we ook screenshots moeten maken van eerdere code.
+## What went smoothly, what was challenging, and what are you most proud of?
+De divjes maken met custom properties en deze kleuren geven vond ik best gemakkelijk gaan.
+Ook de titel verschillende kleuren geven en een animation-delay ging soepel.
+
+Het laten animeren van de divjes vond ik lastig.
+Toen ik begon met deze opdracht wist ik nog niks over keyframes en hoe dit werkt.
+
+Ik kan nu met keyframes aangeven op welk percentage van de animatie wat gebeurt.
+
+De waardes met calc vind ik te begrijpen. Ik moet alleen wel zien wat er gebeurd, bijv. met een tekening, om goed te begrijpen wat er gebeurd.
+
+Het lastigste vond ik de ease en clamp().
+Voor de ease heb ik de website ceaser als tip gekregen.
+Voor de clamp() heb ik gebruik gemaakt van chatgpt zijn hulp.
+
+Waar ik "trots" op ben is dat de verschillende checkboxen werken met de snelheid van het poppetje.
+En dat het mij lukte om de voet te laten zakken met de checkbox different.
+
+## What experiments did you conduct that 'failed'?
+Iets dat ik niet werkend heb gekregen is de voet over het poppetje.
+Eerst kwam de voet ervoor, maar alleen het rechterachterbeen stond voor de voet. Ook als ik z-index probeerde te veranderen.
+Daarna dacht ik om het poppetje te kunnen pletten met de voet. Ik weet niet hoe ik dit moet doen en i.v.m. tijd heb ik ervoor gekozen om het poppetje te laten verdwijnen als de voet in beeld komt.
+
+## Do you have new insights into how to leverage the power of CSS (or not)?
+Ik ben wat wijzer geworden over keyframes en het maken en plaatsen van gekleurde vormen/objecten.
+
+Ik heb nog zoveel meer te leren.
+
+## What do you want to explore further?
+Ik wil nog veel leren over css, maar weet (nog) niet helemaal precies wat. Ik denk ook, omdat er veel mogelijkheden zijn waar ik het bestaan nog niet van af weet.
+
+Om afbeeldingen te kunnen controleren met een scroll animatie lijkt me leuk om te leren.
+Dit heb ik even geleden met een workshop van cyd gedaan, maar dit ging erg snel.
 
 ## Volledige bronnelijst:
-Wikipedia Monty python foot (2008). Geraadpleegd op (17-03-2026) van <a href="https://nl.wikipedia.org/wiki/Bestand:Monty_python_foot.png" alt="monty_python_foot">
+Day 6: the :has() pseudo-class (2022). Geraadpleegd op 18-02-2026 van <a href="https://www.matuzo.at/blog/2022/100daysof-day6/">
+
+Using :has() as a CSS Parent Selector and much more (2022). Geraadpleegd op 18-02-2026 van <a href="https://webkit.org/blog/13096/css-has-pseudo-class/">
+
+mdn (2003). <a href="https://developer.mozilla.org/en-US/">
+
+w3schools (1998) <a href="https://www.w3schools.com/">
+
+stack overflow (2008) <a href="https://stackoverflow.com/questions">
+
+chatgpt (2022). Van <a href="https://chatgpt.com/?utm_source=google&utm_medium=paid_search&utm_campaign=GOOG_C_SEM_GBR_Core_CHT_BAU_ACQ_PER_MIX_ALL_EMEA_NL_EN_042225&c_id=22475634712&c_agid=177633040559&c_crid=747849027118&c_kwid=kwd-1927227100722&c_ims=&c_pms=9102607&c_nw=g&c_dvc=c&gad_source=1&gad_campaignid=22475634712&gbraid=0AAAAA-I0E5c6p-b6UHUdQviWbwuL65Bvd&gclid=Cj0KCQjwve7NBhC-ARIsALZy9HW4bNopRenJxNXCV7uFr2cXRnxNPWXotEmtjKGLD_ry7sHFq4GsOcsaAolMEALw_wcB">
+
+mdn - position (2025). Geraadpleegd op 04-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position">
+
+mdn - calc (2025). Geraadpleegd op 04-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc">
+
+Wakamai Fondue (2018). Geraadpleegd op 12-03-2026 van <a href="https://wakamaifondue.com/beta/">
+
+Typerature (2017). Geraadpleegd op 12-03-2026 van <a href="https://nabla.typearture.com/">
+
+Codepen - workshop container query van Sanne. Geraadpleegd op 12-03-2026 van <a href="https://codepen.io/Eva0412/pen/JoREYQX">
+
+Wikipedia Monty python foot (2008). Geraadpleegd op 17-03-2026 van <a href="https://nl.wikipedia.org/wiki/Bestand:Monty_python_foot.png">
+
+mdn - translateX() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX#:~:text=The%20translateX()%20CSS%20function,transform%2Dfunction%3E%20data%20type.">
+
+mdn - translateY() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateY">
+
+mdn - scaleX() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX">
+
+mdn - scaleY() (2025). Geraadpleegd op 17-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX#:~:text=The%20translateX()%20CSS%20function,transform%2Dfunction%3E%20data%20type.">
+
+mdn - animation-timing-function (2025). Geraadpleegd op 18-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-timing-function">
+
+Monty Python (2014). Geraadpleegd op 18-03-2026 van <a href="https://www.montypython.com/home">
+
+mdn - HTML images (2026). Geraadpleegd op 18-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#:~:text=You%20should%20use%20CSS%20background,t%20waste%20time%20reading%20it.">
+
+w3schools - HTML background images (z.d.). Geraadpleegd op 18-03-2026 <a href="https://www.w3schools.com/html/html_images_background.asp">
+
+mdn - clamp() (2025). Geraadpleegd op 19-03-2026 van <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp">

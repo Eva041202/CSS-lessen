@@ -4,7 +4,10 @@
     transform-style: preserve-3d;
 }
 
-/* Sanne heeft me geholpen wat ik moet doen om de achtergronden over te laten lopen */
+/* MARK - BRON: 
+            mdn - antwoord of ik html nodig heb voor een background image - van https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#:~:text=You%20should%20use%20CSS%20background,t%20waste%20time%20reading%20it.
+            w3schools - background image - van https://www.w3schools.com/html/html_images_background.asp
+            Sanne heeft me geholpen wat ik moet doen om de achtergronden over te laten lopen */
 body {
     background-image: url("./media/media/silly_walk/background.png"), url("./media/media/silly_walk/background2.png");
     background-size: cover;
@@ -21,12 +24,22 @@ body {
 }
 
 
+/*MARK: header had geen layout, waardoor deze niet mooi meebeweegt als het scherm smaller wordt
+        hiermee blijven ze netjes naast elkaar en wrappen ze op mobiel */
+header div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+
 /* Titel */
 h1 {
     position: fixed;
     text-align: center;
     top:1em;
-    font-family: sans-serif;
+    font-family: cursive, sans-serif;
     font-weight:800;
     font-size: xx-large;
 }
@@ -62,6 +75,7 @@ html:has(input[value="different"]:checked) {
     --different:true;
 }
 
+/*MARK: BRON workshop container query van Sanne - https://codepen.io/Eva0412/pen/JoREYQX */
 @container style(--different:true) {
 	body {
 		--background-color: rgb(9, 83, 9);
@@ -80,11 +94,15 @@ html:has(input[value="different"]:checked) {
     left: 50%;
     transform: translateX(-50%);
     top: -800px;
-    width: 800px;
-    height: 800px;
-
+    /*MARK: BRON: clamp gebruikt voor de responsiveness. Ik heb hier chatgpt om hulp gevraagd
+                  de bestaande pixels blijven achter staan. Ervoor komen andere waarde pixels en vw
+                  hierdoor schaalt de hele voet automatisch mee met het scherm */
+    width: clamp(200px, 80vw, 800px);
+    /*MARK: met auto wordt de verhouding netjes gehouden */
+    height: auto;
 }
 
+/*MARK: BRON: ease geleerd van Nils */
 body:has(input[value="different"]:checked) .foot-img {
     animation: dropFoot 0.7s ease-out forwards;
 }
@@ -93,6 +111,11 @@ body:has(input[value="different"]:checked) > div {
     display: none;
 }
 
+/*MARK: BRON:
+            translateX() van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX#:~:text=The%20translateX()%20CSS%20function,transform%2Dfunction%3E%20data%20type.
+            translateY() van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateY
+            scaleX() van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/scaleX
+            scaleY() van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX#:~:text=The%20translateX()%20CSS%20function,transform%2Dfunction%3E%20data%20type.*/
 @keyframes dropFoot {
     0% {
         top: -800px;
@@ -106,12 +129,15 @@ body:has(input[value="different"]:checked) > div {
 
 
 /* Het lichaam */
+/* MARK: BRON: Sanne heeft me uitgelegd over custom properties en geholpen met de eerste twee stukjes, zodat ik de rest zelf verder kon. */
 body > div {
-    --width-lijf: 300px;
-    --height-lijf: 100px;
-
-    --width-been:80px;
-    --height-been:150px;
+    /*MARK: BRON: clamp gebruikt voor de responsiveness. Ik heb hier chatgpt om hulp gevraagd */
+    --width-lijf: clamp(180px, 60vw, 300px);
+    --height-lijf: clamp(60px, 20vw, 100px);
+    /*MARK: de bestaande pixels blijven achter staan. Ervoor komen andere waarde pixels en vw
+            hierdoor schaalt het hele poppetje automatisch mee met het scherm */
+    --width-been: clamp(40px, 15vw, 80px);
+    --height-been: clamp(80px, 30vw, 150px);
 
     width: var(--width-lijf);
     height: var(--height-lijf);
@@ -119,6 +145,9 @@ body > div {
     border-radius: calc(var(--width-lijf) * .5);
 
     position: relative;
+
+/*MARK: BRON: position - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position
+              calc - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc */
 
     /* benen */
     & > div:nth-of-type(1) {
@@ -190,6 +219,7 @@ body > div {
         transform-origin: calc(var(--width-been) * .5) calc(var(--width-been) * .5);
 
         rotate: 0deg;
+        z-index: 20;
 
         & > div {
             width: var(--width-been);
@@ -240,8 +270,10 @@ body > div::after {
     content: "";
     position: absolute;
 
-    width: 170px;
-    height: 120px;
+    /*MARK: om ervoor te zorgen dat het hoofd ook mee verkleint
+            ik gebruik de --height-lijf */
+    width: calc(var(--height-lijf) * 1.7); /* was eerst 170px */
+    height: calc(var(--height-lijf) * 1.2);
     background: peachpuff;
 
     border-radius: 50%;
@@ -249,11 +281,15 @@ body > div::after {
     right: calc(var(--height-lijf) * -0.7);
     top: calc(var(--height-lijf) * -1.15);
 
+/*MARK: BRON: tip van Kelly om z-index te gebruiken */
     z-index: 10;
 }
 
 
 /* Animatie checkbox walk */
+/*MARK: BRON: 
+            chatgpt voor hulp bij de animatie (ease-in-out) van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc
+            mdn - animation-timing-function van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-timing-function */
 body:has(input[value="walk"]:checked) > div > div:nth-of-type(1) {
     animation: walk1 1s ease-in-out infinite;
 }
@@ -276,34 +312,58 @@ body:has(input[value="walk"]:checked) > div > div:nth-of-type(4) {
 }
 
 @keyframes walk2 {
-    0% 100% { rotate: 20deg; }
+    0%, 100% { rotate: 20deg; }
     50% { rotate: -20deg; }
 }
 
 
 /* Animatie checkbox run */
-body:has(input[value="run"]:checked) > div > div:nth-of-type(1),
-body:has(input[value="run"]:checked) > div > div:nth-of-type(4) {
+/*MARK: BRON: 
+            chatgpt voor hulp bij de animatie (ease-in-out) van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc
+            mdn - animation-timing-function van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-timing-function */
+body:has(input[value="run"]:checked) > div > div:nth-of-type(1) {
     animation: run1 0.5s ease-in-out infinite;
 }
-
-body:has(input[value="run"]:checked) > div > div:nth-of-type(2),
-body:has(input[value="run"]:checked) > div > div:nth-of-type(3) {
+body:has(input[value="run"]:checked) > div > div:nth-of-type(2) {
     animation: run2 0.5s ease-in-out infinite;
 }
 
+body:has(input[value="run"]:checked) > div > div:nth-of-type(3) {
+    animation: run3 0.5s ease-in-out infinite;
+}
+body:has(input[value="run"]:checked) > div > div:nth-of-type(4) {
+    animation: run4 0.4s ease-in-out infinite;
+}
+
 @keyframes run1 {
-    0% 100% { rotate: -30deg; }
-    50% { rotate: 30deg; }
+    0% { rotate: -60deg; }
+    50% { rotate: 60deg; }
+    100% { rotate: -60deg; }
 }
 
 @keyframes run2 {
-    0% 100% { rotate: -30deg; }
-    50% { rotate: -30deg; }
+    0% { rotate: -50deg; }
+    50% { rotate: 50deg; }
+    100% { rotate: -50deg; }
+}
+
+@keyframes run3 {
+    0% { rotate: 60deg; }
+    50% { rotate: -60deg; }
+    100% { rotate: 60deg;}
+}
+
+@keyframes run4 {
+    0% { rotate: -50deg; }
+    50% { rotate: 50deg; }
+    100% { rotate: -50deg; }
 }
 
 
 /* Animatie checkox silly */
+/*MARK: BRON: 
+            chatgpt voor hulp bij de animatie (ease-in-out) van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc
+            mdn - animation-timing-function van https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-timing-function */
 body:has(input[value="silly"]:checked) > div > div:nth-of-type(1) {
     animation: silly1 0.7s ease-in-out infinite;
 }
@@ -318,7 +378,7 @@ body:has(input[value="silly"]:checked) > div > div:nth-of-type(4) {
 }
 
 @keyframes silly1 {
-    0% 100% { rotate: -45deg; translateX(0); }
+    0%, 100% { rotate: -45deg; translateX(0); }
     25% { rotate: 45deg; translateX(10px); }
     50% { rotate: -60deg; translateX(-10px); }
     75% { rotate: 60deg; translateX(5); }
@@ -333,14 +393,14 @@ body:has(input[value="silly"]:checked) > div > div:nth-of-type(4) {
 }
 
 @keyframes silly2 {
-    0% 100% { rotate: 60deg; translateX(0); }
+    0%, 100% { rotate: 60deg; translateX(0); }
     25% { rotate: -45deg; translateX(-5px); }
     50% { rotate: 45deg; translateX(10px); }
     75% { rotate: -60deg; translateX(-10px); }
 }
 
 @keyframes silly3 {
-    0% 100% { rotate: -30deg; translateX(0); }
+    0%, 100% { rotate: -30deg; translateX(0); }
     25% { rotate: 30deg; translateX(10px); }
     50% { rotate: -45deg; translateX(-10px); }
     75% { rotate: 45deg; translateX(5px); }
@@ -355,7 +415,7 @@ body:has(input[value="silly"]:checked) > div > div:nth-of-type(4) {
 }
 
 @keyframes silly4 {
-    0% 100% { rotate: 30deg; translateX(0); }
+    0%, 100% { rotate: 30deg; translateX(0); }
     25% { rotate: -30deg; translateX(-5px); }
     50% { rotate: 60deg; translateX(10px); }
     75% { rotate: -60deg; translateX(-10px); }
